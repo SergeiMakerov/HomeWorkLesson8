@@ -32,7 +32,7 @@ void FillArrayRandomNumbers(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 5); //Для увеличения размера чисел в матрицах поменять число 5 на большее
+            array[i, j] = new Random().Next(1, 5);
         }
     }
 }
