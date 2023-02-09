@@ -39,16 +39,16 @@ void FillArrayRandomNumbers(int[,] array)
 
 void ProductOfTwoMatrices(int[,] matrix)
 {
-for (int i = 0; i < size; i++)
-{
-    for (int j = 0; j < size; j++)
+    for (int i = 0; i < size; i++)
     {
-        for (int k = 0; k < size; k++)
+        for (int j = 0; j < size; j++)
         {
-            matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
+            for (int k = 0; k < size; k++)
+            {
+                matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
+            }
         }
     }
-}
 }
 
 void PrintArray(int[,] array)
