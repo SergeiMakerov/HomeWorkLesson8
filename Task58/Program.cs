@@ -11,11 +11,11 @@
 */
 
 int size = 2;
-int[,] matrixA = new int[2, 2];
-int[,] matrixB = new int[2, 2];
+int[,] matrixA = new int[size, size];
+int[,] matrixB = new int[size, size];
 FillArrayRandomNumbers(matrixA);
 FillArrayRandomNumbers(matrixB);
-int[,] matrixC = new int[2, 2];
+int[,] matrixC = new int[size, size];
 ProductOfTwoMatrices(matrixC);
 Console.WriteLine("Матрица - А");
 PrintArray(matrixA);
@@ -32,21 +32,7 @@ void FillArrayRandomNumbers(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 5);
-        }
-    }
-}
-
-void ProductOfTwoMatrices(int[,] matrix)
-{
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < size; j++)
-        {
-            for (int k = 0; k < size; k++)
-            {
-                matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
-            }
+            array[i, j] = new Random().Next(1, 5); //Для увеличения размера чисел в матрицах поменять число 5 на большее
         }
     }
 }
@@ -63,4 +49,18 @@ void PrintArray(int[,] array)
         Console.Write("]");
         Console.WriteLine("");
     }
+}
+
+void ProductOfTwoMatrices(int[,] matrix)
+{
+for (int i = 0; i < size; i++)
+{
+    for (int j = 0; j < size; j++)
+    {
+        for (int k = 0; k < size; k++)
+        {
+            matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
+        }
+    }
+}
 }
