@@ -11,7 +11,7 @@
 номер строки с наименьшей суммой элементов: 1 строка
 */
 
-int[,] numbers = new int[4, 3];
+int[,] numbers = new int[3, 4];
 FillArrayRandomNumbers(numbers);
 PrintArray(numbers);
 int minsum = Int32.MaxValue;
