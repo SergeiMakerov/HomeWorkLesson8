@@ -37,20 +37,6 @@ void FillArrayRandomNumbers(int[,] array)
     }
 }
 
-void PrintArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        Console.Write("[ ");
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + " ");
-        }
-        Console.Write("]");
-        Console.WriteLine("");
-    }
-}
-
 void ProductOfTwoMatrices(int[,] matrix)
 {
     for (int i = 0; i < size; i++)
@@ -62,5 +48,19 @@ void ProductOfTwoMatrices(int[,] matrix)
                 matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
             }
         }
+    }
+}
+
+void PrintArray(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        Console.Write("[ ");
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write(array[i, j] + " ");
+        }
+        Console.Write("]");
+        Console.WriteLine("");
     }
 }
