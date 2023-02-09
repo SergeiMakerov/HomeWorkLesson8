@@ -24,7 +24,7 @@ Console.WriteLine("Задан массив");
 PrintArray(numbers);
 GetSortArray(numbers);
 Console.WriteLine();
-Console.WriteLine("Массив с упорядоченными значениями");
+Console.WriteLine("Массив с упорядоченными значениями по убыванию");
 PrintArray(numbers);
 
 void GetSortArray(int[,] numbers)
@@ -35,7 +35,7 @@ void GetSortArray(int[,] numbers)
         {
             for (int z = 0; z < numbers.GetLength(1) - 1; z++)
             {
-                if (numbers[i, z] < numbers[i, z + 1]) //для изменения порядка сортировки, можно поменять знак <
+                if (numbers[i, z] < numbers[i, z + 1])
                 {
                     int temp = 0;
                     temp = numbers[i, z];
