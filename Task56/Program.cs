@@ -11,15 +11,15 @@
 номер строки с наименьшей суммой элементов: 1 строка
 */
 
-int[,] numbers = new int[3, 4];
+int[,] numbers = new int[4, 3];
 FillArrayRandomNumbers(numbers);
 PrintArray(numbers);
 int minsum = Int32.MaxValue;
 int indexLine = 0;
-GetResult(numbers);
+CalculateResult(numbers);
 Console.WriteLine("номер строки с наименьшей суммой элементов: " + (indexLine) + "  строка:" + ", с суммой елементов равной: " + (minsum));
 
-void GetResult(int[,] numbers)
+void CalculateResult(int[,] numbers)
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
     {
@@ -31,7 +31,7 @@ void GetResult(int[,] numbers)
         if (sum < minsum)
         {
             minsum = sum;
-            indexLine++;
+            indexLine = i + 1;
         }
     }
 }
