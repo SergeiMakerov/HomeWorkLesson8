@@ -22,12 +22,12 @@ FillArrayRandomNumbers(numbers);
 Console.WriteLine();
 Console.WriteLine("Задан массив");
 PrintArray(numbers);
-GetSortArray(numbers);
+SortArray(numbers);
 Console.WriteLine();
 Console.WriteLine("Массив с упорядоченными значениями по убыванию");
 PrintArray(numbers);
 
-void GetSortArray(int[,] numbers)
+void SortArray(int[,] numbers)
 {
     for (int i = 0; i < numbers.GetLength(0); i++)
     {
