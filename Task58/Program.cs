@@ -10,13 +10,13 @@
 15 18
 */
 
-int size = 2;
+int size = 3;
 int[,] matrixA = new int[size, size];
 int[,] matrixB = new int[size, size];
 FillArrayRandomNumbers(matrixA);
 FillArrayRandomNumbers(matrixB);
 int[,] matrixC = new int[size, size];
-ProductOfTwoMatrices(matrixC);
+ProductOfTwoMatrices(matrixA, matrixB, size);
 Console.WriteLine("Матрица - А");
 PrintArray(matrixA);
 Console.WriteLine();
@@ -37,7 +37,7 @@ void FillArrayRandomNumbers(int[,] array)
     }
 }
 
-void ProductOfTwoMatrices(int[,] matrix)
+void ProductOfTwoMatrices(int[,] matrix1, int[,] matrix2, int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -45,7 +45,7 @@ void ProductOfTwoMatrices(int[,] matrix)
         {
             for (int k = 0; k < size; k++)
             {
-                matrixC[i, j] = matrixC[i, j] + (matrixA[i, k] * matrixB[k, j]);
+                matrixC[i, j] = matrixC[i, j] + (matrix1[i, k] * matrix2[k, j]);
             }
         }
     }
